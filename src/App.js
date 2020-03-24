@@ -12,8 +12,9 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
+
+    let runners = (
+      <div>
         {this.state.runners.map(runner => {
           return <Runner
             name={runner.name}
@@ -21,6 +22,12 @@ class App extends Component {
             grade={runner.grade}
             pr={runner.pr} />
         })}
+      </div>
+    );
+
+    return (
+      <div className="App">
+        {runners}
       </div>
     );
   }
